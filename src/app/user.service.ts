@@ -36,6 +36,7 @@ export class UserService {
     console.log(newuser);
     this.http.post(this.baseurl,newuser);
   }
+  //aa
 
   logout(){
     this.deleteToken();
