@@ -23,18 +23,16 @@ export class UserService {
 
  
   public userlogin(newuser: User) {
-    console.log("hey");
+    console.log("heylogin");
     console.log(newuser);
-
-
-
+   // return this.http.get(this.baseurl, newuser); 
     this.setToken(newuser.userid);
   }
 
   public userregistration(newuser: User) {
-    console.log("hey");
+    console.log("heyregister");
     console.log(newuser);
-    this.http.post(this.baseurl,newuser);
+    return this.http.post(this.baseurl, newuser);
   }
   //aa
 

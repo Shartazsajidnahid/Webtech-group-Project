@@ -13,6 +13,12 @@
     font-weight: bold;
 }
 
+h1 {
+    background-color: #F3C693;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+}
+
 .full-page {
     height: 100%;
     width: 100%;

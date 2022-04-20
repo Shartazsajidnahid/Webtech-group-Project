@@ -26,8 +26,20 @@ export class LoginComponent implements OnInit {
   postdata(angForm1: { value: { userid:any; password: any; }; }) {
       this.newuser.userid = angForm1.value.userid;
       this.newuser.password = angForm1.value.password;
-      this.userservice.userlogin(this.newuser);
-     // this.router.navigate(['login']);
+
+      // this.userservice.userlogin(this.newuser).subscribe(
+      //   (res: any) => {
+      //     console.log('conneced');
+      //     this.angForm.reset();
+      //     this.router.navigate(['login']);
+      //   }, (err: any) => {
+      //     console.log('error');
+      //     this.newuser = new User;
+      //   }
+      // );
+
+  
+      this.router.navigate(['login']);
     }
 
   toRegister(){

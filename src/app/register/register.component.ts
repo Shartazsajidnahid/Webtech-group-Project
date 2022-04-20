@@ -33,8 +33,18 @@ export class RegisterComponent implements OnInit {
       this.newuser.email = angForm1.value.email;
       this.newuser.password = angForm1.value.password;
       this.newuser.phone = angForm1.value.phone;
-      this.userservice.userregistration(this.newuser);
-      this.router.navigate(['login']);
+      
+      this.userservice.userregistration(this.newuser).subscribe(
+        (res: any) => {
+          console.log('added');
+          this.angForm.reset();
+          this.router.navigate(['login']);
+        }, (err: any) => {
+          console.log('error');
+          this.newuser = new User;
+        }
+      );
+      
     }
 
     toLogin(){
